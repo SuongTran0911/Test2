@@ -1,3 +1,4 @@
+var http = require('http');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -13,6 +14,7 @@ var users = require('./routes/users');
 var app = express();
 
 // view engine setup
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -22,12 +24,12 @@ app.set('view engine', 'jade');
 //Chạy cho lần đầu tiên
 app.use(cookieParser());
 app.use(session({
-	secret: 'faeb4453e5d14fe6f6d04637f78077c76c73d1b4',
-	proxy: true,
-	resave: true,
-	saveUninitialized: true,
-	store: new MongoStore({ host: 'localhost', port: 27017, db: 'node-login'})
-	})
+  secret: 'faeb4453e5d14fe6f6d04637f78077c76c73d1b4',
+  proxy: true,
+  resave: true,
+  saveUninitialized: true,
+  //store: new MongoStore({ host: 'localhost', port: 27017, db: 'node-login'})
+  })
 );
 //app.use('/', routes);
 //app.use('/users', users);
@@ -69,5 +71,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
+});
 
 module.exports = app;
