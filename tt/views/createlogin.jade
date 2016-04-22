@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  div#content_create
+    center
+      h2 Tạo tài khoản
+    div.container
+      div.row
+      form(name="form_login_create",method="post",action="/createlogin").form-group
+        div.form-group
+          label.control-label.col-xs-2 Email
+          div.col-xs-10
+            input(type="email" placeholder="Email" name="email").form-control
+        div.form-group
+          label.control-label.col-xs-2 Họ Tên
+          div.col-xs-10
+            input(type="text" placeholder="Họ và tên" name="name" ).form-control
+        div.form-group
+          label.control-label.col-xs-2 Mật khẩu
+          div.col-xs-10
+            input(type="password" placeholder="password" name="pass").form-control
+        div.form-group
+          label.control-label.col-xs-2 Xác nhận mật khẩu
+          div.col-xs-10
+            input(type="password" placeholder="confirm password" name="confirm_pass" onChange="checkpass(this.form)").form-control
+        button(type="submit" name="create" onClick='login()').btn.btn-primary
+          Đăng ký
+        button(type="submit" name="cancle" onClick="redirectTo('./login.jade')").btn.btn-default Hủy bỏ

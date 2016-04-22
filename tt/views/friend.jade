@@ -1,0 +1,43 @@
+extends layout
+
+block content
+
+  div.navbar.navbar-fixed-top
+    div.navbar-inner
+      div.container
+        ul.nav.navbar-nav
+          li()
+            a(href="/outbox") Outbox
+          li()
+            a(href="/message") New message
+          li()
+            a(href="/homemessage") Inbox
+          li()
+            a(href="/outbox") Friend
+        button(type="button",onclick="logout()",data-toggle="dropdown")#btn-logout.btn.btn-primary Sign Out
+  div#content_friend
+    if data != null
+      each item in data.friend
+        div.friend
+          span=item
+          button(data-toggle="dropdown")#button.btn.btn-success.dropdown-toggle Bạn bè
+            span.caret
+          div.dropdown
+            ul.dropdown-menu
+              li
+                a(href="/delete/#{data.email}") Hủy kết bạn
+              li
+                a(href="/block/#{item}" onclick="Changbutton()") Block
+              li
+                a(href="/unblock/#{item}") UnBlock
+    each item1 in data1
+      div.friend
+        span=item1.email
+        button(onclick="AddFriend('#{item1.email}')")#change.btn.btn-danger.dropdown-toggle Thêm bạn bè
+          span.caret
+        div.dropdown
+          ul.dropdown-menu
+            li
+              a(href="/block/#{item}",onclick="Changbutton()") Block
+            li
+              a(href="/unblock/#{item}") UnBlock

@@ -1,0 +1,183 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #f2f9fe;
+  background: -moz-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%) /* FF3.6+ */;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f2f9fe), color-stop(100%, #d6f0fd)) /* Chrome,Safari4+ */;
+  background: -webkit-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%) /* Chrome10+,Safari5.1+ */;
+  background: -o-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%) /* Opera 12+ */;
+  background: -ms-radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%) /* IE10+ */;
+  background: radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%) /* W3C */;
+}
+
+a {
+  color: #00B7FF;
+}
+#content{
+  width: 300px;
+  height:auto;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-top:130px;
+  background: #FAFAFA;
+}
+.form-group label{
+  margin: 15px 0 5px 15px;
+  font-size: 15px;
+}
+.form-group input{
+  width: 250px;
+  margin-left: 10px;
+}
+#content .checkbox{
+  margin: 10px 0 0 10px;
+  font-size: 15px;
+}
+#btn-logout{
+  width: 120px;
+  height: 30px;
+  top: 1px;
+  right: 8px;
+  position: absolute;
+  float: right;
+}
+#content button {
+  padding: 6px 40px 6px 40px;
+  margin: 5px 0px 30px 10px;
+}
+#content .btm-links #create-account {
+
+  margin:20px 0px 0px 80px;
+
+}
+#content .btm-links #forgot-password {
+
+  margin:20px 0px 0px 10px;
+}
+#content_create{
+  width: 300px;
+  height:auto;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-top:130px;
+  background: #FAFAFA;
+}
+#content_create button {
+  width: 150px;
+  margin-top: 15px;
+}
+#content_message{
+  width: 700px;
+  height:auto;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #FAFAFA;
+}
+#content_message b{
+  margin-left: 10px;
+  display: block;
+}
+#content_message button{
+  width: 200px;
+  height: 40px;
+  margin: 15px 0px 0px 10px;
+  color: black;
+
+}
+#content_message textarea{
+  display: inline;
+  width: 650px;
+}
+#content_message select{
+  margin-left: 10px;
+}
+
+#content_homemessage{
+  width: 700px;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #FAFAFA;
+}
+
+#content_homemessage .listOpenMessage{
+  width: 200px;
+  list-style-type: none;
+  height: auto;
+  padding-left: 10px;
+  font-size: 14px;
+  margin: 3px 0px 0px  10px;
+  float:left;
+}
+#content_homemessage .listOpenMessage ul{
+  list-style-type: none;
+  display: inline;
+}
+#content_homemessage .listOpenMessage .click{
+
+  width: 200px;
+  height: auto;;
+  cursor: pointer;
+}
+#content_homemessage .listOpenMessage img{
+  width: 50px;
+  height: 50px;
+}
+#content_homemessage .viewmessage{
+  width:65%;
+  height: 300px;
+  border: 1px solid #CFCFCF;
+  float:left;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+#content_homemessage b{
+  margin:5px 0px 0px 10px;
+   font-size: 15px;
+}
+
+.navbar.navbar-light.bg-faded{
+  width:650px;
+  height:30px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 40px;
+  font-size: 17px;
+}
+.nav-link{
+  width: 140px;
+  height: auto;
+  color:black ;
+}
+#content_friend{
+  width: 700px;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #FAFAFA;
+  padding: 10px 10px 10px 10px;
+}
+#content_friend .friend{
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  float:left;
+  border: 1px solid #E8E8E8;
+  margin: 5px;
+}
+#content_friend .friend button{
+  float: right;
+  width:auto;
+}

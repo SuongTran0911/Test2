@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div.navbar.navbar-fixed-top
+    div.navbar-inner
+      div.container
+        ul.nav.navbar-nav
+          li()
+            a(href="/outbox") Outbox
+          li()
+            a(href="/message") New message
+          li()
+            a(href="/homemessage") Inbox
+          li()
+            a(href="/friend") Friend
+        button(name="logout",onclick="logout()")#btn-logout.btn.btn-primary Sign Out
+  div#content_message
+    center
+      h2 Message
+    form(name="form_message",method="post",action="/message")
+      b Người nhận
+      select(name='friend').selectpicker
+          each item in data.friend
+            option(selected=item)= item
+      b Nội dung tin nhắn
+        textarea(rows="5" ,name="content", onchange="Ham(text)" ).form-control
+      button(name="message" ,type="submit").btn.btn-info.btn-sm Gửi tin nhắn

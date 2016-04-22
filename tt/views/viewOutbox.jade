@@ -1,0 +1,48 @@
+extends layout
+
+
+block content
+  div.navbar.navbar-fixed-top
+    div.navbar-inner
+      div.container
+        ul.nav.navbar-nav
+          li()
+            a(href="/outbox") Outbox
+          li()
+            a(href="/message") New message
+          li()
+            a(href="/homemessage") Inbox
+          li()
+            a(href="/friend") Friend
+        button(name="logout",onclick="logout()")#btn-logout.btn.btn-primary Sign Out
+  div#content_homemessage
+    center
+      h2 Box Message have #{data.length} message
+    div().listOpenMessage
+      hr
+      each item in data
+        if item.read == true
+          div(onclick="renderOutbox('#{item._id}')").click
+            img(src="../images/message_open.png",alt="anh")
+            ul()
+              li()= item.receiver
+              li()= item.date
+              hr
+    div.viewmessage
+      b Người gửi:
+      span #{data1.receiver}
+      br
+      br
+      b Ngày gửi:
+      span #{data1.date}
+      br
+      br
+      b Ngày nhận tin nhắn:
+      if data1.date == null
+        span Chưa xem tin nhắn
+      else
+        span #{data1.date}
+      br
+      br
+      b Nội dung:
+      span #{data1.message}

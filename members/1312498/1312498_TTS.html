@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon"  type="image/x-icon" href="images/icon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.js"></script>
+    <title>Website nhóm 2S</title>
+</head
+
+><body>
+	<div id="Banner">
+        <center><h1>Chào mừng bạn đã đến với website của nhóm 2S</h1></center>
+    </div>
+	<div id="Menu">
+    	<ul>
+       	<li class="Menu1"><a href="#"> Menu</a></li>
+        	<li>
+            	<img class="icon" src="images/home.png"/><a href="../../Source.html">Trang chủ</a>
+                
+            </li>
+            <li>
+            	<img class="icon" src="images/member.png"/>
+                    <a href="#">Thành viên</a>
+                    <img src="images/incon_menu.png"/>
+                    <ul class="MenuCap1">
+                        <li>
+                            <div>
+                                <img src="images/avtar_NS.png"/><a href="../1312485/1312485_NNS.html">Nguyễn Ngọc Sáng</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="images/avtar_ST.jpg"/><a href="./members/1312498/1312498.html">Trần Thị Sương</a>
+                            </div>
+                        </li>
+                    </ul>
+            </li>
+            <li>
+            	<img class="icon" src="images/study.png"/><a href="#">Bài tập</a>
+                <img src="images/incon_menu.png"/>
+                <ul class="MenuCap1">
+                        <li><a href="../../BanCo.html">Bàn cờ</a></li>
+                        <li><a href="../../BCK.html">Bảng cửu chương</a></li>
+                  </ul>
+            </li>
+            <li>
+            	<img class="icon" src="images/references.png"/><a href="#">Tài liệu</a>
+                <img src="images/incon_menu.png"/>
+            </li>
+            <li>
+            	<img class="icon" src="images/contact.jpg"/><a href="../../LienHe.html">Liên Hệ</a>
+            </li>
+        </ul>
+        <button id="btnMenu" type="button"></button>
+    </div>
+    <img id="page1" src="images/Banner.jpg" alt="Banner"/>
+    <center>
+        <h2>Thông tin cá nhân</h2>
+        <hr />
+        <div id="NoiDung">
+            <img src="images/1312498_SuongTran.jpg" alt="Avatar" />
+             <ul>
+                <li>
+                    <font size="5">Họ và tên: Trần Thị Sương</font>
+                </li>
+                <li>
+                    <font size="5 ">MSSV: 1312498</font>
+
+                </li>
+                <li>
+                    <font size="5">Năm sinh: 09/11/1995</font>
+                </li>
+                <li>
+                    <font size="5">Số điện thoại: 0972331904</font>
+                </li>
+                <li>
+                    <font size="5">
+                        Liên hệ:
+                        <img src="images/Gmail.png" width="50" height="50" alt="Email" usemap="#MailMap" />
+                        <map id="mailMap" name="MailMap">
+                            <area shape="rect" coords="5,5,45,45" alt="MailClick" href="mailto:ttsuong@live.com" />
+                        </map>
+                        <img src="images/Facebook.png" width="50" height="50" alt="Facebook" usemap="#FaceMap" />
+                        <map id="faceMap" name="FaceMap">
+                            <area shape="rect" coords="5,5,45,45" alt="FaceClick" href="https://www.facebook.com/tran.suong.7982" />
+                        </map>
+                    </font>
+                </li>
+            </ul>
+        </div>
+    </center>
+    <form id="form_contact">
+              <textarea id="txtCM" rows="1" cols="10" placeholder="Nội dung..."></textarea>
+    </form>
+    <div id="footer">
+        	<center><h3><i>Copyright@</i>Nguyễn Ngọc Sáng - Trần Thị Sương - UDPT</h3></center>
+    </div>
+    <script>
+            window.addEventListener("resize", function () {
+            var wid = $('#page1').css('height');
+            var wid1 = parseInt(wid) / 20;
+			wid1 = wid1+ 'px';
+            $('#footer').css('font-size',wid1);
+            
+            });
+            
+     </script>
+</body>
+</html>

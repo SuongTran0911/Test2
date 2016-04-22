@@ -1,0 +1,31 @@
+extends layout
+
+
+block content
+  div.navbar.navbar-fixed-top
+    div.navbar-inner
+      div.container
+        div.nav.navbar-nav
+        ul.nav.navbar-nav
+          li()
+            a(href="/outbox") Outbox
+          li()
+            a(href="/message") New message
+          li()
+            a(href="/homemessage") Inbox
+          li()
+            a(href="/friend") Friend
+        button(name="logout" onclick="logout()")#btn-logout.btn.btn-primary Sign Out
+  div#content_homemessage
+    center
+      h2 Out Box Message have #{data.length} message
+    div().listOpenMessage
+      hr
+      each item in data
+        div(onclick="renderOutbox('#{item._id}')").click
+          img(src="../images/message_open.png",alt="anh")
+          ul()
+            li()= item.receiver
+            li()= item.date
+            hr
+    div.viewmessage

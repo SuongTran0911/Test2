@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div#content
+    center
+      h2 Đăng nhập
+    div.container
+
+      form(name="form", method="post",action="/")
+        div.form-group
+          label Email
+          input(type="email" placeholder="Email" name="email").form-control
+        div.form-group
+          label Mật khẩu
+          input(type="password" placeholder="password" name="pass").form-control
+        div.checkbox
+          label Ghi nhớ
+          input(type="checkbox" name="remember")
+        button(type="submit" name="login" onClick='Home()').btn.btn-primary Đăng nhập
+        div.btm-links
+          a(href='#')#forgot-password Quên mật khẩu?
+          a(href='/createlogin')#create-account Tạo tài khoản
